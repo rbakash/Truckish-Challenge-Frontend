@@ -1,23 +1,32 @@
-.textCenter{
-    justify-content: center;
+.cardCenter{
+    margin:5rem;
 }
 
-
-
-  .login-form-flex {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100%;
-    margin: 5rem;
-  }
+.navbar{
+  justify-content: space-between;
+}
+.textCenter{
   
-  .button-flex-container {
-    display: flex;
-    width: 100%;
-    justify-content: center;
+  justify-content: center;
+}
+
+.centeralignment{
+  margin: 0 auto;
+  width: 45%;
+  height:100%
+}
+
+.cardHeader{
+   margin-top: 5rem;
+}
+.example-card {
+  max-width: 800px;
+}
+
+mat-form-field {
+  width: 80%;
   }
 
-  .example-card {
-    max-width: 400px;
+  mat-card{
+    height: 80%;
   }

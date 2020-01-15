@@ -1,9 +1,10 @@
 <mat-toolbar color="primary" class="navbar">
-  <div>My Saved place Application</div>
+  <div class="textCenter">My Saved place Application</div>
   <div>
-    <span>Add place</span>
-    <span>View Saved place</span>
-    <span>Logout</span>
+    <button mat-button (click)="this.commonService.navigteToAddPlace()">Add place</button>
+    <button mat-button (click)="this.commonService.navigteToViewSavedPlace()">View Saved place</button>
+    <button mat-button (click)="this.commonService.logout()">Logout</button>
+    
   </div>
 </mat-toolbar>
 <p>allsaved-places works!</p>

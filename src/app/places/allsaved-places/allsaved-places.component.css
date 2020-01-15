@@ -1,3 +1,6 @@
 .navbar{
     justify-content: space-between;
 }
+.textCenter{
+    justify-content: center;
+}

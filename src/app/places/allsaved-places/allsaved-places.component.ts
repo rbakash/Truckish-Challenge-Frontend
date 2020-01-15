@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { CommonService } from 'src/app/shared/common.service';
 
 @Component({
   selector: 'app-allsaved-places',
@@ -7,9 +8,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AllsavedPlacesComponent implements OnInit {
 
-  constructor() { }
+  constructor(private commonService: CommonService) { }
 
   ngOnInit() {
   }
-
+  
 }

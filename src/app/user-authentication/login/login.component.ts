@@ -24,7 +24,8 @@ export class LoginComponent implements OnInit {
   }
   LoginUser() {
     this.commonService.authenticateUser(this.userCredentials).subscribe(response => {
-      this._snackBar.open(response.Message, "Ok",{duration: 2000});
+      console.log(response)
+      this._snackBar.open(response.Message, "Ok",{duration: 3500});
       if (response.status == 200) {
         console.log(response.Token);
         
@@ -35,7 +36,7 @@ export class LoginComponent implements OnInit {
       }
       // 
     }, error => {
-      this._snackBar.open('Internal Server Error', "Try again");
+      this._snackBar.open('Internal Server Error', "Try again",{duration: 3500});
     })
   }
 }

@@ -24,7 +24,28 @@
       <textarea matInput placeholder="Leave a comment"></textarea>
     </mat-form-field>
   </form> -->
-<form class="login-form-flex" name="loginForm" (ngSubmit)="LoginUser()" #loginForm="ngForm">
+  <form name="loginForm" (ngSubmit)="LoginUser()" #loginForm="ngForm">
+  <div class="centeralignment" >
+    <mat-card align="center" class="card cardCenter">
+        <mat-card-title class="mat-headline">Login</mat-card-title>
+      
+        <mat-card-content align="center">
+          <mat-form-field class="example-full-width">
+            <input matInput placeholder="Email" [(ngModel)]="userCredentials.Email" name="Email" required>
+          </mat-form-field>
+          <br />
+          <mat-form-field class="example-full-width">
+            <input type="password" matInput placeholder="Password" [(ngModel)]="userCredentials.Password" name="Password" required>
+          </mat-form-field>
+          
+        </mat-card-content>
+        <mat-card-actions>
+          <button type="submit" style="margin-bottom: 1rem;" mat-raised-button color="primary" [disabled]="!(loginForm.form.valid)">Sign In</button>
+        </mat-card-actions>
+    </mat-card>
+  </div>
+</form>
+<!-- <form class="login-form-flex" name="loginForm" (ngSubmit)="LoginUser()" #loginForm="ngForm">
   <mat-card align="center" class="example-card">
     <mat-card-title>
       Login
@@ -43,7 +64,7 @@
     </mat-card-actions>
   </mat-card>
   
-</form>
+</form> -->
 <!-- </div> -->
 
 <!-- <mat-card align="center" class="card">

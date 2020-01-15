@@ -5,6 +5,7 @@ import { PlacesRoutingModule } from './places-routing.module';
 import { AllsavedPlacesComponent } from './allsaved-places/allsaved-places.component';
 import { AddNewPlaceComponent } from './add-new-place/add-new-place.component';
 import { MaterialModule } from '../material/angularMaterial.module';
+import { FormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -12,7 +13,8 @@ import { MaterialModule } from '../material/angularMaterial.module';
   imports: [
     CommonModule,
     PlacesRoutingModule,
-    MaterialModule
+    MaterialModule,
+    FormsModule
   ]
 })
 export class PlacesModule { }
