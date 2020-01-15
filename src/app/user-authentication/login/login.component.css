@@ -1,0 +1,23 @@
+.textCenter{
+    justify-content: center;
+}
+
+
+
+  .login-form-flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    margin: 5rem;
+  }
+  
+  .button-flex-container {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+  }
+
+  .example-card {
+    max-width: 400px;
+  }
