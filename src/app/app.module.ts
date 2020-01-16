@@ -8,7 +8,6 @@ import { UserAuthenticationModule } from './user-authentication/user-authenticat
 import { MaterialModule } from './material/angularMaterial.module';
 import { HttpClientModule } from '@angular/common/http';
 import {FlexLayoutModule} from '@angular/flex-layout';
-import { MatSnackBar } from '@angular/material';
 import { PlacesModule } from './places/places.module';
 @NgModule({
   declarations: [

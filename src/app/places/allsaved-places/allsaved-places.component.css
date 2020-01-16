@@ -4,3 +4,25 @@
 .textCenter{
     justify-content: center;
 }
+.example-card {
+    max-width: 310px;
+    /* min-width: 100px; */
+    margin: 10px;
+    float:left
+  }
+  
+  .example-header-image {
+    background-size: cover;
+  }
+.example-form {
+    min-width: 150px;
+    max-width: 400px;
+    width: 100%;
+    float: right;
+  }
+
+  image{
+    object-fit: contain; 
+    height: 80%;
+  }
+  

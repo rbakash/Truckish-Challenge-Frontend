@@ -32,7 +32,6 @@ export class LoginComponent implements OnInit {
           this.router.navigate(['/viewSavedPlaces']);
         }, 2000);
       }
-      // 
     }, error => {
       this._snackBar.open('Internal Server Error', "Try again",{duration: 3500});
     })

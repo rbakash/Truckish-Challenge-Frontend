@@ -4,7 +4,57 @@
     <button mat-button (click)="this.commonService.navigteToAddPlace()">Add place</button>
     <button mat-button (click)="this.commonService.navigteToViewSavedPlace()">View Saved place</button>
     <button mat-button (click)="this.commonService.logout()">Logout</button>
-    
+
   </div>
 </mat-toolbar>
-<p>allsaved-places works!</p>
+<div class="mat-app-background basic-container margin50">
+  <div class="mat-elevation-z8">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col " *ngIf="!isImageListEmpty">
+          <i class="fa fa-search marginRight10 fr ">
+
+          </i>
+        </div>
+        <mat-toolbar color="warn" class="navbar textCenter " *ngIf="isImageListEmpty">
+          <div class="textCenter">You don't have any places saved. Use the Navbar add Page to save the places</div>
+        </mat-toolbar>
+      </div>
+    </div>
+    <div class="container-fluid" *ngIf="!isImageListEmpty">
+      <mat-form-field class="">
+        <input matInput type="text" name="search" placeholder="Search Places by name" [(ngModel)]="placeName">
+
+      </mat-form-field>
+      <div class="col">
+        <!-- *ngFor="let item of pagedItems | filter:filter" -->
+        <div class="col-3">
+          {{placeName}}
+          <div *ngFor="let item of fetchedSavedPlace |filter: placeName;let imageindex=index">
+            <mat-card class="example-card">
+              <mat-card-header>
+                <div class="example-header-image"></div>
+                <mat-card-subtitle>{{item.Name}}</mat-card-subtitle>
+              </mat-card-header>
+              <img mat-card-image class="image" src="{{item.blob}}" alt="Photo of a Shiba Inu">
+              <mat-card-content>
+                <p>
+                  Description: {{item.Description}}
+                </p>
+                <p>
+                  Address: {{item.Address}}
+                </p>
+              </mat-card-content>
+              <mat-card-actions>
+                <button mat-button (click)="viewSavedPlace(imageindex)">View All Details</button>
+                <button mat-button>Delete</button>
+              </mat-card-actions>
+            </mat-card>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+</div>

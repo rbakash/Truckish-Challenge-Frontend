@@ -1,5 +1,5 @@
 export let nodeServerURL = {
-    // For local
+    // For Development
     endpoint: 'http://localhost:1234/'
     
 };

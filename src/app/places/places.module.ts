@@ -6,15 +6,17 @@ import { AllsavedPlacesComponent } from './allsaved-places/allsaved-places.compo
 import { AddNewPlaceComponent } from './add-new-place/add-new-place.component';
 import { MaterialModule } from '../material/angularMaterial.module';
 import { FormsModule } from '@angular/forms';
-
+import { Ng2SearchPipeModule } from 'ng2-search-filter';
+import { ViewSavedPlaceComponent } from './view-saved-place/view-saved-place.component';
 
 @NgModule({
-  declarations: [AllsavedPlacesComponent, AddNewPlaceComponent],
+  declarations: [AllsavedPlacesComponent, AddNewPlaceComponent, ViewSavedPlaceComponent],
   imports: [
     CommonModule,
     PlacesRoutingModule,
     MaterialModule,
-    FormsModule
+    FormsModule,
+    Ng2SearchPipeModule
   ]
 })
 export class PlacesModule { }

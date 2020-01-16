@@ -1,0 +1,39 @@
+<mat-toolbar color="primary" class="navbar">
+    <div>My Saved place Application</div>
+    <div>
+        <button mat-button (click)="this.commonService.navigteToAddPlace()">Add place</button>
+        <button mat-button (click)="this.commonService.navigteToViewSavedPlace()">View Saved place</button>
+        <button mat-button (click)="this.commonService.logout()">Logout</button>
+
+    </div>
+</mat-toolbar>
+<form name="loginForm" #addimageDetailsForm="ngForm">
+    <div class="centeralignment">
+        <mat-card align="center" class="example-card textCenter">
+            <mat-card-title>Add new place</mat-card-title>
+
+            <mat-card-content>
+                <mat-form-field>
+                    <input matInput placeholder="New Place Name" name="PlaceName" [(ngModel)]="imageDetails.Name"
+                        readonly>
+                </mat-form-field>
+                <br />
+                <mat-form-field>
+                    <input matInput placeholder="New Place description" name="PlcaeDescription"
+                        [(ngModel)]="imageDetails.Description" readonly>
+                </mat-form-field>
+                <br />
+                <mat-form-field>
+                    <input matInput placeholder="New Place Address" name="PlaceAddress"
+                        [(ngModel)]="imageDetails.Address" readonly>
+                </mat-form-field>
+                <br />
+                <img mat-card-image src="{{imageDetails.blob}}" alt="Photo of a Saved Place">
+
+
+            </mat-card-content>
+            
+            <br />
+        </mat-card>
+    </div>
+</form>
