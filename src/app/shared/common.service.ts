@@ -28,11 +28,16 @@ export class CommonService {
   navigteToViewSavedPlace(){
     this.router.navigate(['viewSavedPlaces']);
   }
-  public uploadImage(newPlaceDetails:NewPlaceModel){
+  public uploadNewplaceDetails(newPlaceDetails:NewPlaceModel){
     const formData = new FormData();
+    formData.append("UserId",sessionStorage.getItem("Id"))
+    formData.append('newPlaceNameimage', newPlaceDetails.placeImage.ImageFile);
+    formData.append('newPlaceName',newPlaceDetails.placeName);
+    formData.append('newPlaceDescription',newPlaceDetails.placeDescription);
+    formData.append('newPlaceAddress',newPlaceDetails.placeAddress);
 
-    formData.append('image', newPlaceDetails.placeImage.ImageFile);
-
-    return this.http.post('/api/v1/image-upload', formData);
+    return this.http.post(nodeServerURL.endpoint+'addPlaceSubmission', formData).pipe(map((response:any) => {
+      return response;
+  }));
   }
 }

@@ -24,12 +24,10 @@ export class LoginComponent implements OnInit {
   }
   LoginUser() {
     this.commonService.authenticateUser(this.userCredentials).subscribe(response => {
-      console.log(response)
       this._snackBar.open(response.Message, "Ok",{duration: 3500});
       if (response.status == 200) {
-        console.log(response.Token);
-        
-        sessionStorage.setItem("Token",response.Token)
+        sessionStorage.setItem("Id",response.Id);
+        sessionStorage.setItem("Token",response.Token);
         setTimeout((router: Router) => {
           this.router.navigate(['/viewSavedPlaces']);
         }, 2000);
