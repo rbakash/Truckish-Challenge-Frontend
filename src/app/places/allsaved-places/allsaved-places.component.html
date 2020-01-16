@@ -1,5 +1,5 @@
 <mat-toolbar color="primary" class="navbar">
-  <div class="textCenter">My Saved place Application</div>
+  <div class="textCenter">My Saved Place </div>
   <div>
     <button mat-button (click)="this.commonService.navigteToAddPlace()">Add place</button>
     <button mat-button (click)="this.commonService.navigteToViewSavedPlace()">View Saved place</button>
@@ -21,15 +21,14 @@
         </mat-toolbar>
       </div>
     </div>
-    <div class="container-fluid" *ngIf="!isImageListEmpty">
-      <mat-form-field class="">
+    <div class="container-fluid" align="center" *ngIf="!isImageListEmpty">
+      <mat-form-field align="center">
         <input matInput type="text" name="search" placeholder="Search Places by name" [(ngModel)]="placeName">
 
       </mat-form-field>
       <div class="col">
         <!-- *ngFor="let item of pagedItems | filter:filter" -->
         <div class="col-3">
-          {{placeName}}
           <div *ngFor="let item of fetchedSavedPlace |filter: placeName;let imageindex=index">
             <mat-card class="example-card">
               <mat-card-header>

@@ -27,6 +27,7 @@ export class AddNewPlaceComponent implements OnInit {
       this.selectedFile.Imagesource = event.target.result
       this.selectedFile.ImageFile = file;
       this.selectedFile.pending = true;
+      this._snackBar.open('File selected Successfully', "Ok",{duration: 2000})
       this.newPlace.placeImage = this.selectedFile;
     });
 
@@ -40,6 +41,8 @@ export class AddNewPlaceComponent implements OnInit {
           this.router.navigate(['/viewSavedPlaces']);
         }, 1500);
       }
-    })
+    },error => {
+      this._snackBar.open('Internal Server Error', "Try again",{duration: 3500});
+    });
   }
 }

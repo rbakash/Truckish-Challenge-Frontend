@@ -25,4 +25,6 @@
     object-fit: contain; 
     height: 80%;
   }
-  
+  mat-form-field {
+    width: 50%;
+    }
